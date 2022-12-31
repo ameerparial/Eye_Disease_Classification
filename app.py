@@ -107,7 +107,7 @@ def getAttributes(path):
 
 @st.cache
 def load_model(): 
-    model = joblib.load('https://github.com/ameerparial/files/blob/main/random_forest.joblib')
+    model=cv2.CascadeClassifier('https://github.com/anaustinbeing/haar-cascade-files/blob/master/haarcascade_eye.xml')
     return model
 
 model = load_model()
@@ -119,8 +119,8 @@ if image is not None:
     st.image(input_image) #display image
 
     with st.spinner("🤖 AI is at Work! "):        
-        label = model.predict(getAttributes(input_image))
-        st.write(label)
+#         label = model.predict(getAttributes(input_image))
+        st.write(model)
     #st.success("Here you go!")
     st.balloons()
 else:
