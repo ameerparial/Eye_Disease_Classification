@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 import joblib
+import urllib.request
 import cv2
 import pandas as pd
 from sklearn import preprocessing
@@ -107,7 +108,7 @@ def getAttributes(path):
 
 @st.cache
 def load_model(): 
-    model=cv2.CascadeClassifier('https://github.com/anaustinbeing/haar-cascade-files/blob/master/haarcascade_eye.xml')
+    model = joblib.load(urllib.request.urlopen('https://github.com/ameerparial/files/blob/main/random_forest.joblib'))
     return model
 
 model = load_model()
