@@ -112,7 +112,7 @@ def load_model():
     http = urllib3.PoolManager()
     response = http.request('GET', url)
     model = joblib.load(response)
-    return
+    return model
 
 model = load_model()
 
