@@ -115,8 +115,8 @@ model = load_model()
 
 if image is not None:
 
-    input_image = Image.open(image) #read image
-    st.image(input_image) #display image
+#     input_image = Image.open(image) #read image
+#     st.image(input_image) #display image
 
     with st.spinner("🤖 AI is at Work! "):        
 #         label = model.predict(getAttributes(input_image))
