@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 import joblib
-import urllib.request
+import urllib3.request
 import cv2
 import pandas as pd
 from sklearn import preprocessing
