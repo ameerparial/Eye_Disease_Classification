@@ -22,11 +22,6 @@ image = st.file_uploader(label = "Upload your image here",type=['png','jpg','jpe
 
 #Reading a file
 
-import urllib2  # the lib that handles the url stuff
-
-
-
-
 #Image preprocessing
 def get_eye_cordinate(geteye):
   x_cord = []
