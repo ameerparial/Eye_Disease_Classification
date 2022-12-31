@@ -124,4 +124,4 @@ if image is not None:
 else:
     st.write("Upload an Image")
 
-st.caption("Made by Ameer Hamza, Thanks to Hugging faces")
+st.caption("Made by Ameer Hamza, Farhan and Areeba, Thanks to Hugging faces")
