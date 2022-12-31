@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 import joblib
-import urllib.request
+import urllib3
 import cv2
 import pandas as pd
 from sklearn import preprocessing
@@ -108,16 +108,19 @@ def getAttributes(path):
 
 @st.cache
 def load_model(): 
-    model = joblib.load(urllib.request.urlopen('https://github.com/ameerparial/files/blob/main/random_forest.joblib'))
-    return model
+    url = 'https://github.com/ameerparial/files/blob/main/random_forest.joblib'  
+    http = urllib3.PoolManager()
+    response = http.request('GET', url)
+    model = joblib.load(response)
+    return
 
 model = load_model()
 
 
 if image is not None:
 
-#     input_image = Image.open(image) #read image
-#     st.image(input_image) #display image
+    input_image = Image.open(image) #read image
+    st.image(input_image) #display image
 
     with st.spinner("🤖 AI is at Work! "):        
 #         label = model.predict(getAttributes(input_image))
