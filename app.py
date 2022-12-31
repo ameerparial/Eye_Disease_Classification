@@ -107,7 +107,7 @@ def getAttributes(path):
 
 @st.cache
 def load_model(): 
-    model = joblib.load('https://github.com/ameerparial/ml_project_python/blob/main/random_forest.joblib')
+    model = joblib.load('https://github.com/ameerparial/files/blob/main/random_forest.joblib')
     return model
 
 model = load_model()
