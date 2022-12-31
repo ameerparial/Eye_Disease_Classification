@@ -4,4 +4,4 @@ pandas
 scikit-learn
 opencv-python
 scikit-image
-urllib
+urllib3
